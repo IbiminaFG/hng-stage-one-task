@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Slack Name -->
+        <div>
+            <h2>Slack Name:</h2>
+            <p data-testid="slackUserName">Gogo Ibimina Felix</p>
+        </div>
+
+        <!-- Slack Display Picture -->
+        <div id="image-container">
+            <h2>Slack Display Picture:</h2>
+            <img src="picture.jpg" alt="Gogo 1" data-testid="slackDisplayImage">
+        </div>
+
+        <!-- Current Day of the Week -->
+        <div>
+            <h2>Current Day of the Week:</h2>
+            <p id="dayOfWeek" data-testid="currentDayOfTheWeek">Monday</p>
+        </div>
+
+        <!-- Current UTC Time -->
+        <div>
+            <h2>Current UTC Time:</h2>
+            <p id="utcTimeOfWeek" data-testid="currentUTCTime">1631040000000</p>
+        </div>
+
+        <!-- Track -->
+        <div>
+            <h2>Track:</h2>
+            <p data-testid="myTrack">Frontend</p>
+        </div>
+
+        <!-- GitHub URL -->
+        <div>
+            <h2>GitHub URL:</h2>
+            <a href="https://https://github.com/IbiminaFG/hng-stage-one-task" data-testid="githubURL">GitHub
+                Repository</a>
+        </div>
+    </main>
+</body>
+
+<script>
+    const currentDate = new Date();
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()]
+    const currentUTCTime = currentDate.getTime()
+
+    document.getElementById("dayOfWeek").textContent = currentDayOfWeek
+    document.getElementById("utcTimeOfWeek").textContent = currentUTCTime
+</script>
+
+</html>

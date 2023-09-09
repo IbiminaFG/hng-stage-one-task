@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  height: 100vh;
+}
+
+main {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#image-container {
+  flex-direction: column;
+}
+
+img {
+  width: 300px;
+}
+
+p {
+  font-size: 1.3rem;
+}
